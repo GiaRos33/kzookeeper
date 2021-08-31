@@ -5,7 +5,8 @@ default['kzookeeper']['url']                       = ""
 default['kzookeeper']['user']                      = node['install']['user'].empty? ? "zookeeper" : node['install']['user']
 default['kzookeeper']['group']                     = node['install']['user'].empty? ? "zookeeper" : node['install']['user']
 
-
+default['kzookeeper']['uid']                   = "10230"
+default['kzookeeper']['gid']                   = "10231"
 default['kzookeeper']['dir']                       = node['install']['dir'].empty? ? "/opt" : node['install']['dir']
 default['kzookeeper']['install_dir']               = "#{node['kzookeeper']['dir']}/zookeeper"
 default['kzookeeper']['base_dir']                  = "#{node['kzookeeper']['install_dir']}/zookeeper"
